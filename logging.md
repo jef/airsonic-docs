@@ -13,7 +13,7 @@ Airsonic ouput log messages into a file called `airsonic.log` located in the `AI
 
 One can change the defaults log level by modifying the default application inner configuration.
 
-This application configuration is located in a file called `application.properties` packaged into the Airsonic.war file. Fortunately, there are ways to override the default configuration without having to modify the `application.properties` inner file.
+This application configuration is located in a file called `airsonic.properties` packaged into the Airsonic.war file. Fortunately, there are ways to override the default configuration without having to modify the `airsonic.properties` inner file.
 
 Those interested in details can have a look at [this spring.io document](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config-application-property-files).
 
@@ -27,12 +27,12 @@ Running Airsonic as a standalone application means that you don't deploy Airsoni
 java -jar airsonic.war
 ```
 
-In that case you can add your own `application.properties` file in a `config` subdirectory to override the default application configuration.
+In that case you can add your own `airsonic.properties` file in a `config` subdirectory to override the default application configuration.
 
 Suppose that you'd like to change the default log level to DEBUG. Follow these steps:
 
 - create a `config` folder beside the `airsonic.war` file
-- create a `config/application.properties` empty file
+- create a `config/airsonic.properties` empty file
 - add the following line into this file
 
 ```
@@ -41,7 +41,7 @@ logging.level.root=DEBUG
 
 - restart Airsonic
 
-The `config/application.properties` file can contain any logging configuration directive.
+The `config/airsonic.properties` file can contain any logging configuration directive.
 You can fine tune the log level on any java package by adding a line like:
 
 ```

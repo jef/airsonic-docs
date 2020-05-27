@@ -33,10 +33,10 @@ To change this, please use one of the guide below according to your installation
 
 You will also need to make sure Airsonic uses the correct headers for redirects, by setting the `server.use-forward-headers` property to `true`.
 
-To do so, stop your Airsonic server or Docker image, then edit the `config/application.properties` file:
+To do so, stop your Airsonic server then edit the `config/airsonic.properties` file:
 
 ```
-nano /path/to/airsonic/config/application.properties
+nano /path/to/airsonic/config/airsonic.properties
 ```
 
 Add the following line to the bottom of the file:
